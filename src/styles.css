@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+@theme {
+    --color-page-background: oklch(0.9813 0.01 238.51);
+    --font-display: "Oswald", "sans-serif";
+}
