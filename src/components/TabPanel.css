@@ -1,0 +1,29 @@
+/**
+ * TabPanel Styles
+ * ----------
+ * A fully–accessible tab component that renders its own navigation
+ * and shows a Heading + Paragraph for the currently-selected tab.
+ *
+ */
+@import "tailwindcss";
+
+@layer components {
+    .tab-panel           { @apply w-full; }
+
+    .tab-panel__wrapper  { @apply max-w-2xl mx-auto; }
+
+    .tab-panel__tablist  { @apply flex rounded-2xl border border-gray-300
+    overflow-hidden mb-8 bg-white/80 backdrop-blur; }
+
+    .tab-panel__button   { @apply flex-1 px-6 py-3 text-center text-sm sm:text-base
+    transition font-medium focus:outline-none; }
+
+    .tab-panel__button--active   { @apply text-cyan-700 border-b-4 border-b-cyan-700 bg-white; }
+    .tab-panel__button--inactive { @apply text-gray-500 hover:text-cyan-700; }
+
+    .tab-panel__divider  { @apply w-px bg-gray-300; }
+
+    .tab-panel__content  { @apply max-w-4xl mx-auto; }
+    .tab-panel__heading  { @apply mb-4 text-center; }
+    .tab-panel__paragraph{ @apply text-center; }
+}

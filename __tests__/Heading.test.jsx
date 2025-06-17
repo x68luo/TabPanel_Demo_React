@@ -14,4 +14,16 @@ describe('<Heading />', () => {
         const h2 = screen.getByRole('heading', { name: /another title/i, level: 2 });
         expect(h2.tagName).toBe('H2');
     });
+
+    it('renders an <h3> when level=3', () => {
+        render(<Heading level={3}>Section Title</Heading>);
+        const h3 = screen.getByRole('heading', { name: /section title/i, level: 3 });
+        expect(h3.tagName).toBe('H3');
+    });
+
+    it('renders an <h6> when level=6', () => {
+        render(<Heading level={6}>Footer Title</Heading>);
+        const h6 = screen.getByRole('heading', { name: /footer title/i, level: 6 });
+        expect(h6.tagName).toBe('H6');
+    });
 });
